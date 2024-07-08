@@ -14,3 +14,5 @@ SELECT favouriteCity.id, city.id, city.cityname FROM favouriteCity
 LEFT JOIN city ON city.id = favouriteCity.city
 WHERE user = "userid";
 
+-- Nutzeraktivitäten anzeigen (Admin)
+SELECT userActivity.id, activityType.typeName, user.username, city.cityname, timeOfActivity FROM userActivity

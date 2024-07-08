@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS user
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL,
     passhash VARCHAR(64) NOT NULL,
-    adminPrivileges BOOLEAN NOT NULL,
+    adminPrivileges BOOLEAN NOT NULL DEFAULT false,
     -- Usereinstellungen
     useCelsius BOOLEAN NOT NULL DEFAULT true
 );
@@ -16,7 +16,8 @@ CREATE TABLE IF NOT EXISTS userActivity
     activityType INT NOT NULL REFERENCES activityType(id),
     user INT NOT NULL REFERENCES user(id),
     city INT NULL REFERENCES city(id), -- ggf. Verweis auf City z.B. beim Ansehen der Detailseite
-    weatherReport INT NULL REFERENCES weatherReport(id) -- ggf. Verweis auf Wetterbericht bei Erstellung
+    weatherReport INT NULL REFERENCES weatherReport(id), -- ggf. Verweis auf Wetterbericht bei Erstellung
+    timeOfActivity DATETIME NOT NULL DEFAULT current_timestamp
 );
 CREATE TABLE IF NOT EXISTS activityType
 (
