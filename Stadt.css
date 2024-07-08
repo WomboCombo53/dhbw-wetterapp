@@ -1,0 +1,54 @@
+body
+{
+    background-color: cornflowerblue;
+}
+
+.details
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    width: 960;
+}
+
+h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr
+{
+    width: auto;
+    height: 5px;
+    background-color: black;
+    border: 0;
+}
+
+.Beschriftung
+{
+    font-size: medium;
+}
+
+.überschrift
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.table_icons
+{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0%;
+    right: 0%;
+    background-color: cornflowerblue;
+}
+
+button
+{
+    background-color: cornflowerblue;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
