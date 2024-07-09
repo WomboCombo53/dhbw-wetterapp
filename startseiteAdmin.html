@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wetter-App</title>
+    <link rel="stylesheet" href="startseiteUser.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h1 align="center">Wetter-App</h1>
+    <table class="table_icons">
+        <tr>
+            <td>
+                <button class="keine_border" id="statistik_button"><a href="statistik.html"><img src="bilder/statistikbild.png"></a></button>
+            </td>
+            <td>
+                <button class="keine_border" id="popupoeffnen"><img src="bilder/zahnradbild.png"></button>
+
+                <div class="popup" id="popup">
+                    <div class="popup-geoeffnet">
+                    <h2>Einstellungen</h2>
+                    <p>
+                        <table align="center" class="h2">
+                            <tr>
+                                <td>
+                                    <label for="fahrenheit">Fahrenheit aktivieren:</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="fahrenheit" name="fahrenheit" value="Fahrenheit">
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                    <button id="popupschliessen">Close</button>
+                    </div>
+                </div>
+                <!--https://www.flaticon.com/de/kostenloses-icon/die-einstellungen_561196?term=einstellungen&page=1&position=1&origin=search&related_id=561196-->
+            </td>
+        </tr>
+    </table>
+    <table class="table_städte_anzeigen" align="center">
+        <tr>
+            <td>
+                <button class="keine_border" id="Stadtname1"><a href="StadtAdmin.html">Stadtname1</a></button>
+            </td>
+            <td>
+                <a id="Stadttemp1">Temp1</a>
+            </td>
+            <td>
+                <button class="keine_border" id="stadt_loeschen_button1"><img src="bilder/mulltonnebild.png"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="keine_border" id="Stadtname2"><a href="StadtAdmin.html">Stadtname2</a></button>
+            </td>
+            <td>
+                <a id="Stadttemp2">Temp2</a>
+            </td>
+            <td>
+                <button class="keine_border" id="stadt_loeschen_button2"><img src="bilder/mulltonnebild.png"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="keine_border" id="Stadtname3"><a href="StadtAdmin.html">Stadtname3</a></button>
+            </td>
+            <td>
+                <a id="Stadttemp3">Temp3</a>
+            </td>
+            <td>
+                <button class="keine_border" id="stadt_loeschen_button3"><img src="bilder/mulltonnebild.png"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class="neue_stadt">Neue Stadt hinzufügen:</a>
+            </td>
+            <td>
+                <input type="text" class="eingabefeld_neue_stadt" id="neue_stadt" name="neue_stadt">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button class="neue_stadt_button" id="neue_stadt_bestaetigen_button">Bestätigen</button>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+    <script src="popup.js"></script>
+</body> 
+</html>
