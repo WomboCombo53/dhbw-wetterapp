@@ -1,8 +1,12 @@
 button
 {
     background-color: cornflowerblue;
-    border: 0;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.keine_border
+{
+    border: 0;
 }
 
 .table_icons
@@ -49,4 +53,20 @@ a
     font-weight: bold;
     text-decoration: none;
     color: black;
+}
+
+.neue_stadt
+{
+    font-size: medium;
+}
+
+.eingabefeld_neue_stadt
+{
+    background-color: cadetblue;
+}
+
+.neue_stadt_button
+{
+    background-color: cadetblue;
+    font-weight: bold;
 }
