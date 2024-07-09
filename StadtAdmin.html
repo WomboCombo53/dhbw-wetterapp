@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wetter-App</title>
+        <link rel="stylesheet" href="Stadt.css">
+        <link rel="stylesheet" href="popup.css"
+    </head>
+    <body>
+        <table class="table_icons">
+            <tr>
+                <td>
+                    <button id="popupoeffnen"><img src="bilder/zahnradbild.png"></button>
+
+                    <div class="popup" id="popup">
+                        <div class="popup-geoeffnet">
+                        <h2>Einstellungen</h2>
+                        <p>
+                            <table align="center" class="h2">
+                                <tr>
+                                    <td>
+                                        <label for="fahrenheit">Fahrenheit aktivieren:</label>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" id="fahrenheit" name="fahrenheit" value="Fahrenheit">
+                                    </td>
+                                </tr>
+                            </table>
+                        </p>
+                        <button id="popupschliessen">Close</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <h1 align="center">Wetter-App</h1>
+        <table align="center" class="überschrift">
+            <tr>
+                <td>
+                    <a>Das aktuelle Wetter in ihrer Stadt:</a>
+                </td>
+            </tr>
+        </table>
+        <table class="details" align="center">
+            <tr class="Beschriftung">
+                <td>
+                    Ihre Stadt:
+                </td>
+                <td>
+                    Die aktuelle Temperatur (in Grad):
+                </td>
+                <td>
+                    Die aktuelle Regenwahrscheinlichkeit (in %):
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="Stadtname">Stuttgart</a> 
+                </td>
+                <td>
+                    <a id="Stadttemp">24</a>
+                </td>
+                <td>
+                    <a id="Regenwahrsch">67</a>
+                    <img id="wettericon" src="bilder/regenbild.png">
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table align="center" class="überschrift">
+            <tr>
+                <td>
+                    <a>Die aktuellsten Meldungen unserer User:</a>
+                </td>
+            </tr>
+        </table>
+        <table class="details" align="center">
+            <tr class="Beschriftung">
+                <td>
+                    User:
+                </td>
+                <td>
+                    Gemeldet (Uhr):
+                </td>
+                <td>
+                    Temperatur (in Grad):
+                </td>
+                <td>
+                    Regenwahrscheinlichkeit (in %)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="username">frani1611</a>
+                </td>
+                <td>
+                    <a id="uhrzeit_user">13:15</a>
+                </td>
+                <td>
+                    <a id="temp_user">19</a>
+                </td>
+                <td>
+                    <a id="regen_user">2</a>
+                    <img id="wettericon1" src="bilder/regenbild.png">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="username2">Username2</a>
+                </td>
+                <td>
+                    <a id="uhrzeit_user2">uhrzeit2</a>
+                </td>
+                <td>
+                    <a id="temp_user2">Temperatur2</a>
+                </td>
+                <td>
+                    <a id="regen_user2">Regen2</a>
+                    <img id="wettericon2" src="bilder/regenbild.png">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="username3">Username3</a>
+                </td>
+                <td>
+                    <a id="uhrzeit_user3">uhrzeit3</a>
+                </td>
+                <td>
+                    <a id="temp_user3">Temperatur3</a>
+                </td>
+                <td>
+                    <a id="regen_user3">Regen3</a>
+                    <img id="wettericon3" src="bilder/regenbild.png">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="username4">Username4</a>
+                </td>
+                <td>
+                    <a id="uhrzeit_user4">uhrzeit4</a>
+                </td>
+                <td>
+                    <a id="temp_user4">Temperatur4</a>
+                </td>
+                <td>
+                    <a id="regen_user4">Regen4</a>
+                    <img id="wettericon4" src="bilder/regenbild.png">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="username5">Username5</a>
+                </td>
+                <td>
+                    <a id="uhrzeit_user5">uhrzeit5</a>
+                </td>
+                <td>
+                    <a id="temp_user5">Temperatur5</a>
+                </td>
+                <td>
+                    <a id="regen_user5">Regen5</a>
+                    <img id="wettericon5" src="bilder/regenbild.png">
+                </td>
+            </tr>
+        </table>
+        <script src="script.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>

@@ -4,7 +4,7 @@ button
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.keine_border
+.einstellungen
 {
     border: 0;
 }
@@ -17,15 +17,6 @@ button
     top: 0%;
     right: 0%;
     background-color: cornflowerblue;
-}
-
-.table_städte_anzeigen
-{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
-    font-weight: bold;
-    border-spacing: 10px;
-    width: 400px
 }
 
 .icons
@@ -46,27 +37,38 @@ h1
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a
+.kurzbeschreibung
+{
+    height: 200px;
+    vertical-align: top;
+    text-align: right;
+}
+
+input
+{
+    width: 400px;
+    background-color: cadetblue;
+    border-spacing: 10px;
+}
+
+td
+{
+    font-weight: bold;
+    vertical-align: top;
+    text-align: right;
+}
+
+center 
 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
+}
+
+.bestaetigenButton
+{
     font-weight: bold;
-    text-decoration: none;
-    color: black;
-}
-
-.neue_stadt
-{
-    font-size: medium;
-}
-
-.eingabefeld_neue_stadt
-{
     background-color: cadetblue;
+    border-color: black;
+    ;
 }
 
-.neue_stadt_button
-{
-    background-color: cadetblue;
-    font-weight: bold;
-}
+

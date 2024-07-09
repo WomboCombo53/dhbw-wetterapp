@@ -5,54 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wetter-App</title>
     <link rel="stylesheet" href="startseiteUser.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
     <h1 align="center">Wetter-App</h1>
-    <table border="0" class="table_icons">
+    <table class="table_icons">
         <tr>
             <td>
-                <button id="WetterberichtHinzufügen"><a href="wetterberichtHinzufügen.html"><img src="Hinzufügenbild.png"class="icons"></a></button>
-                <!--https://www.flaticon.com/de/kostenloses-icon/hinzufugen_1237946?term=plus&page=1&position=8&origin=search&related_id=1237946-->
-            </td>
-            <td>
-                <button id="EinstellungenButton"><a href="einstellungenUser.html"><img src="zahnradbild.png" class="icons"></a></button>
+                <button id="popupoeffnen"><img src="bilder/zahnradbild.png"></button>
+
+                <div class="popup" id="popup">
+                    <div class="popup-geoeffnet">
+                    <h2>Einstellungen</h2>
+                    <p>
+                        <table align="center" class="h2">
+                            <tr>
+                                <td>
+                                    <label for="fahrenheit">Fahrenheit aktivieren:</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="fahrenheit" name="fahrenheit" value="Fahrenheit">
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
+                    <button id="popupschliessen">Close</button>
+                    </div>
+                </div>
                 <!--https://www.flaticon.com/de/kostenloses-icon/die-einstellungen_561196?term=einstellungen&page=1&position=1&origin=search&related_id=561196-->
             </td>
         </tr>
     </table>
-    <table border="1" class="table_städte_anzeigen" align="center">
+    <table class="table_städte_anzeigen" align="center">
         <tr>
             <td>
-                <a id="Stadtname1">Berlin</a>
+                <button id="Stadtname1"><a href="Stadt.html">Stadtname1</a></button>
             </td>
             <td>
-                <a id="Stadttemp1">...</a>
+                <a id="Stadttemp1">Temp1</a>
             </td>
             <td>
-                <button id="FavoritenSpeichern1"><img src="favoritenbild.png"></button>
+                <button id="FavoritenSpeichern1"><img src="bilder/favoritenbild.png"></button>
+                <!--https://www.flaticon.com/de/kostenloses-icon/star_118669?term=stern&page=1&position=1&origin=search&related_id=118669-->
             </td>
         </tr>
         <tr>
             <td>
-                <a id="Stadtname2">...</a>
+                <button id="Stadtname2"><a href="Stadt.html">Stadtname2</a></button>
             </td>
             <td>
-                <a id="Stadttemp2">...</a>
+                <a id="Stadttemp2">Temp2</a>
             </td>
             <td>
-                <button id="FavoritenSpeichern2"><img src="favoritenbild.png"></button>
+                <button id="FavoritenSpeichern2"><img src="bilder/favoritenbild.png"></button>
             </td>
         </tr>
         <tr>
             <td>
-                <a id="Stadtname3">...</a>
+                <button id="Stadtname3"><a href="Stadt.html">Stadtname3</a></button>
             </td>
             <td>
-                <a id="Stadttemp3">...</a>
+                <a id="Stadttemp3">Temp3</a>
             </td>
             <td>
-                <button id="FavoritenSpeichern3"><img src="favoritenbild.png"></button>
+                <button id="FavoritenSpeichern3"><img src="bilder/favoritenbild.png"></button>
             </td>
         </tr>
-    </table>     
+    </table>
+    <script src="script.js"></script>
+    <script src="popup.js"></script>
+</body> 
 </html>
