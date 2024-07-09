@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wetter-App</title>
+        <link rel="stylesheet" href="wetterbericht.css">
+        <link rel="stylesheet" href="popup.css">
+    </head>
+    <body>
+        <h1 align="center">Wetter-App</h1>
+        <table class="table_icons">
+            <tr>
+                <td>
+                    <button class="einstellungen" id="popupoeffnen"><img src="bilder/zahnradbild.png"></button>
+                    
+                    <div class="popup" id="popup">
+                        <div class="popup-geoeffnet">
+                            <h2>Einstellungen</h2>
+                            <p>
+                                <table align="center" class="h2">
+                                    <tr>
+                                        <td>
+                                            <label for="fahrenheit">Fahrenheit aktivieren:</label>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="fahrenheit" name="fahrenheit" value="Fahrenheit">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </p>
+                            <button id="popupschliessen">Close</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <center>
+            Hier kannst du deinen eigenen Wetterbericht hinzufügen!
+        </center>
+        <br>
+        <table border="0" align="center" class="input"> 
+            <tr>
+                <td>
+                    <label for="Uhrzeit">Uhrzeit (hh:mm):</label>
+                </td>
+                <td>
+                    <input type="text" id="Uhrzeit" name="Uhrzeit">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Temperatur">Temperatur (in Grad):</label>
+                </td>
+                <td>
+                    <input type="text" id="Temperatur" name="Temperatur">
+                </td>
+            </tr>
+            <tr>
+                <td class="kurzbeschreibung">
+                    <label for="Kurzbeschreibung">Kurzbeschreibung:</label>
+                </td>
+                <td>
+                    <input type="text" class="kurzbeschreibung" id="Kurzbeschreibung" name="Kurzbeschreibung">
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <br>
+                    <button class="bestaetigenButton" id="bestaetigenButton">Bestätigen</button>
+                </td>
+            </tr>
+        </table>
+        <script src="script.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>
