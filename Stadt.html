@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Wetter-App</title>
         <link rel="stylesheet" href="Stadt.css">
+        <link rel="stylesheet" href="popup.css"
     </head>
     <body>
         <table class="table_icons">
@@ -14,8 +15,26 @@
                     <!--https://www.flaticon.com/de/kostenloses-icon/hinzufugen_1237946?term=plus&page=1&position=8&origin=search&related_id=1237946-->
                 </td>
                 <td>
-                    <button id="EinstellungenButton"><a href="einstellungen.html"><img src="bilder/zahnradbild.png" class="icons"></a></button>
-                    <!--https://www.flaticon.com/de/kostenloses-icon/die-einstellungen_561196?term=einstellungen&page=1&position=1&origin=search&related_id=561196-->
+                    <button id="popupoeffnen"><img src="bilder/zahnradbild.png"></button>
+
+                    <div class="popup" id="popup">
+                        <div class="popup-geoeffnet">
+                        <h2>Einstellungen</h2>
+                        <p>
+                            <table align="center" class="h2">
+                                <tr>
+                                    <td>
+                                        <label for="fahrenheit">Fahrenheit aktivieren:</label>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" id="fahrenheit" name="fahrenheit" value="Fahrenheit">
+                                    </td>
+                                </tr>
+                            </table>
+                        </p>
+                        <button id="popupschliessen">Close</button>
+                        </div>
+                    </div>
                 </td>
             </tr>
         </table>
@@ -152,5 +171,6 @@
             </tr>
         </table>
         <script src="script.js"></script>
+        <script src="popup.js"></script>
     </body>
 </html>

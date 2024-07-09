@@ -1,0 +1,74 @@
+button
+{
+    background-color: cornflowerblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.einstellungen
+{
+    border: 0;
+}
+
+.table_icons
+{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0%;
+    right: 0%;
+    background-color: cornflowerblue;
+}
+
+.icons
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+body
+{
+    background-color:cornflowerblue;
+}
+
+h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.kurzbeschreibung
+{
+    height: 200px;
+    vertical-align: top;
+    text-align: right;
+}
+
+input
+{
+    width: 400px;
+    background-color: cadetblue;
+    border-spacing: 10px;
+}
+
+td
+{
+    font-weight: bold;
+    vertical-align: top;
+    text-align: right;
+}
+
+center 
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bestaetigenButton
+{
+    font-weight: bold;
+    background-color: cadetblue;
+    border-color: black;
+    ;
+}
+
+
