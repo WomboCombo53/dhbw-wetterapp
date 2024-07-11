@@ -12,9 +12,11 @@
     <h1 align="center">Wetter-App</h1>
     <table class="table_icons">
         <tr>
-            <td>
+                <td class="admin">
+                    <button class="keine_border" id="statistik_button"><a href="statistik.html"><img src="bilder/statistikbild.png"></a></button>
+                </td>
+                <td>
                 <button class="keine_border" id="popupoeffnen"><img src="bilder/zahnradbild.png"></button>
-
                 <div class="popup" id="popup">
                     <div class="popup-geoeffnet">
                     <h2>Einstellungen</h2>
@@ -25,7 +27,7 @@
                                     <label for="fahrenheit">Fahrenheit aktivieren:</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" id="fahrenheit" name="fahrenheit" value="Fahrenheit">
+                                    <input type="checkbox" id="fahrenheit" onchange="EventFahrenheitValueChanged()" name="fahrenheit" value="Fahrenheit">
                                 </td>
                             </tr>
                         </table>
@@ -37,42 +39,10 @@
             </td>
         </tr>
     </table>
-    <div class="admin">
-        <table class="table_icons">
-            <tr>
-                <td>
-                    <button class="keine_border" id="statistik_button"><a href="statistik.html"><img src="bilder/statistikbild.png"></a></button>
-                </td>
-                <td>
-                    <button class="keine_border" id="popupoeffnen"><img src="bilder/zahnradbild.png"></button>
-    
-                    <div class="popup" id="popup">
-                        <div class="popup-geoeffnet">
-                        <h2>Einstellungen</h2>
-                        <p>
-                            <table align="center" class="h2">
-                                <tr>
-                                    <td>
-                                        <label for="fahrenheit">Fahrenheit aktivieren:</label>
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="fahrenheit" name="fahrenheit" value="Fahrenheit">
-                                    </td>
-                                </tr>
-                            </table>
-                        </p>
-                        <button id="popupschliessen">Schließen</button>
-                        </div>
-                    </div>
-                    <!--https://www.flaticon.com/de/kostenloses-icon/die-einstellungen_561196?term=einstellungen&page=1&position=1&origin=search&related_id=561196-->
-                </td>
-            </tr>
-        </table>
-    </div>
     <table class="table_städte_anzeigen" align="center">
         <tr>
             <td>
-                <button class="keine_border" id="Stadtname1"><a href="Stadt.html">Stadtname1</a></button>
+                <button class="keine_border" id="Stadtname1"><a href="Stadt.html?stadt=stuttgart">Stadtname1</a></button>
             </td>
             <td>
                 <a id="Stadttemp1">Temp1</a>
