@@ -17,7 +17,7 @@
                 </td>
                 <td>
                     <button id="popupoeffnen"><img src="bilder/zahnradbild.png"></button>
-
+    
                     <div class="popup" id="popup">
                         <div class="popup-geoeffnet">
                         <h2>Einstellungen</h2>
@@ -39,6 +39,34 @@
                 </td>
             </tr>
         </table>
+        <div class="admin">
+            <table class="table_icons">
+                <tr>
+                    <td>
+                        <button id="popupoeffnen"><img src="bilder/zahnradbild.png"></button>
+    
+                        <div class="popup" id="popup">
+                            <div class="popup-geoeffnet">
+                            <h2>Einstellungen</h2>
+                            <p>
+                                <table align="center" class="h2">
+                                    <tr>
+                                        <td>
+                                            <label for="fahrenheit">Fahrenheit aktivieren:</label>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="fahrenheit" name="fahrenheit" value="Fahrenheit">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </p>
+                            <button id="popupschliessen">Schließen</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
         <h1 align="center">Wetter-App</h1>
         <table align="center" class="überschrift">
             <tr>
@@ -48,26 +76,25 @@
             </tr>
         </table>
         <table class="details" align="center">
-            <tr class="Beschriftung">
+            <tr class="stadtname">
                 <td>
-                    Ihre Stadt:
-                </td>
-                <td>
-                    Die aktuelle Temperatur (in Grad):
-                </td>
-                <td>
-                    Die aktuelle Regenwahrscheinlichkeit (in %):
+                    <a id="Stadtname">Stuttgart</a> 
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a id="Stadtname">Stuttgart</a> 
-                </td>
-                <td>
                     <a id="Stadttemp">24</a>
+                    <img src="bilder/celsiusbild.png">
                 </td>
+            </tr>
+            <tr>
                 <td>
                     <a id="Regenwahrsch">67</a>
+                    <img src="bilder/tropfenbild.png">
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <img id="wettericon" src="bilder/regenbild.png">
                 </td>
             </tr>
@@ -109,6 +136,9 @@
                     <a id="regen_user">2</a>
                     <img id="wettericon1" src="bilder/regenbild.png">
                 </td>
+                <td class="admin">
+                    <button class="keine_border" id="stadt_loeschen_button1"><img src="bilder/mulltonnebild.png"></button>
+                </td>
             </tr>
             <tr>
                 <td>
@@ -123,6 +153,9 @@
                 <td>
                     <a id="regen_user2">Regen2</a>
                     <img id="wettericon2" src="bilder/regenbild.png">
+                </td>
+                <td class="admin">
+                    <button class="keine_border" id="stadt_loeschen_button1"><img src="bilder/mulltonnebild.png"></button>
                 </td>
             </tr>
             <tr>
@@ -139,6 +172,9 @@
                     <a id="regen_user3">Regen3</a>
                     <img id="wettericon3" src="bilder/regenbild.png">
                 </td>
+                <td class="admin">
+                    <button class="keine_border" id="stadt_loeschen_button1"><img src="bilder/mulltonnebild.png"></button>
+                </td>
             </tr>
             <tr>
                 <td>
@@ -154,6 +190,9 @@
                     <a id="regen_user4">Regen4</a>
                     <img id="wettericon4" src="bilder/regenbild.png">
                 </td>
+                <td class="admin">
+                    <button class="keine_border" id="stadt_loeschen_button1"><img src="bilder/mulltonnebild.png"></button>
+                </td>
             </tr>
             <tr>
                 <td>
@@ -168,6 +207,9 @@
                 <td>
                     <a id="regen_user5">Regen5</a>
                     <img id="wettericon5" src="bilder/regenbild.png">
+                </td>
+                <td class="admin">
+                    <button class="keine_border" id="stadt_loeschen_button1"><img src="bilder/mulltonnebild.png"></button>
                 </td>
             </tr>
         </table>

@@ -13,9 +13,6 @@
     <table class="table_icons">
         <tr>
             <td>
-                <button class="keine_border" id="statistik_button"><a href="statistik.html"><img src="bilder/statistikbild.png"></a></button>
-            </td>
-            <td>
                 <button class="keine_border" id="popupoeffnen"><img src="bilder/zahnradbild.png"></button>
 
                 <div class="popup" id="popup">
@@ -40,41 +37,74 @@
             </td>
         </tr>
     </table>
+    <div class="admin">
+        <table class="table_icons">
+            <tr>
+                <td>
+                    <button class="keine_border" id="statistik_button"><a href="statistik.html"><img src="bilder/statistikbild.png"></a></button>
+                </td>
+                <td>
+                    <button class="keine_border" id="popupoeffnen"><img src="bilder/zahnradbild.png"></button>
+    
+                    <div class="popup" id="popup">
+                        <div class="popup-geoeffnet">
+                        <h2>Einstellungen</h2>
+                        <p>
+                            <table align="center" class="h2">
+                                <tr>
+                                    <td>
+                                        <label for="fahrenheit">Fahrenheit aktivieren:</label>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" id="fahrenheit" name="fahrenheit" value="Fahrenheit">
+                                    </td>
+                                </tr>
+                            </table>
+                        </p>
+                        <button id="popupschliessen">Schließen</button>
+                        </div>
+                    </div>
+                    <!--https://www.flaticon.com/de/kostenloses-icon/die-einstellungen_561196?term=einstellungen&page=1&position=1&origin=search&related_id=561196-->
+                </td>
+            </tr>
+        </table>
+    </div>
     <table class="table_städte_anzeigen" align="center">
         <tr>
             <td>
-                <button class="keine_border" id="Stadtname1"><a href="StadtAdmin.html">Stadtname1</a></button>
+                <button class="keine_border" id="Stadtname1"><a href="Stadt.html">Stadtname1</a></button>
             </td>
             <td>
                 <a id="Stadttemp1">Temp1</a>
             </td>
             <td>
-                <button class="keine_border" id="stadt_loeschen_button1"><img src="bilder/mulltonnebild.png"></button>
+                <button class="keine_border" id="FavoritenSpeichern1"><img src="bilder/favoritenbild.png"></button>
+                <!--https://www.flaticon.com/de/kostenloses-icon/star_118669?term=stern&page=1&position=1&origin=search&related_id=118669-->
             </td>
         </tr>
         <tr>
             <td>
-                <button class="keine_border" id="Stadtname2"><a href="StadtAdmin.html">Stadtname2</a></button>
+                <button class="keine_border" id="Stadtname2"><a href="Stadt.html">Stadtname2</a></button>
             </td>
             <td>
                 <a id="Stadttemp2">Temp2</a>
             </td>
             <td>
-                <button class="keine_border" id="stadt_loeschen_button2"><img src="bilder/mulltonnebild.png"></button>
+                <button class="keine_border" id="FavoritenSpeichern2"><img src="bilder/favoritenbild.png"></button>
             </td>
         </tr>
         <tr>
             <td>
-                <button class="keine_border" id="Stadtname3"><a href="StadtAdmin.html">Stadtname3</a></button>
+                <button class="keine_border" id="Stadtname3"><a href="Stadt.html">Stadtname3</a></button>
             </td>
             <td>
                 <a id="Stadttemp3">Temp3</a>
             </td>
             <td>
-                <button class="keine_border" id="stadt_loeschen_button3"><img src="bilder/mulltonnebild.png"></button>
+                <button class="keine_border" id="FavoritenSpeichern3"><img src="bilder/favoritenbild.png"></button>
             </td>
         </tr>
-        <tr>
+        <tr class="admin">
             <td>
                 <a class="neue_stadt">Neue Stadt hinzufügen:</a>
             </td>
@@ -82,7 +112,7 @@
                 <input type="text" class="eingabefeld_neue_stadt" id="neue_stadt" name="neue_stadt">
             </td>
         </tr>
-        <tr>
+        <tr class="admin">
             <td></td>
             <td>
                 <button class="neue_stadt_button" id="neue_stadt_bestaetigen_button">Bestätigen</button>
