@@ -1,6 +1,6 @@
 body
 {
-    background-color:cornflowerblue;
+    background-color:#56c7f7;
     text-align: center;
 }
 
@@ -21,12 +21,12 @@ table
 
 button
 {
-    background-color:cadetblue;
+    background-color:white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;    
 }
 
 input
 {
-    background-color: cadetblue;
+    background-color: white;
 }

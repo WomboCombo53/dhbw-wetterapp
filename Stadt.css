@@ -1,6 +1,6 @@
 body
 {
-    background-color: cornflowerblue;
+    background-color:#56c7f7;
 }
 
 .details
@@ -32,16 +32,20 @@ hr
 .Beschriftung
 {
     font-size: medium;
-    text-decoration: underline;
+}
+
+.stadtname
+{
+    font-size: large;
 }
 
 .überschrift
 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    font-size: larger;
     width: 400px;
     text-align: center;
-    text-decoration: underline;
     margin-bottom: 0.75cm;
 
 }
@@ -53,12 +57,17 @@ hr
     height: auto;
     top: 0%;
     right: 0%;
-    background-color: cornflowerblue;
+    background-color: #56c7f7;
 }
 
 button
 {
-    background-color: cornflowerblue;
+    background-color: #56c7f7;
     border: 0;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.admin
+{
+    visibility:hidden;
 }
