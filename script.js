@@ -29,14 +29,16 @@ const favoriteStorage = "favs"
 const cityActivityStorage = "cAct"
 const userActivityStorage = "uAct"
 
+const defaultWeather = {"temp": 35, "desc": "Sonnig", "rain": 55};
+
 let users = [
     {"username": "user", "password": "user", "isAdmin": false, "useCelsius": true},
     {"username": "admin", "password": "admin", "isAdmin": true, "useCelsius": false}
 ]
 
 let cities = [
-    {"cityname": "Bonn", "apiKey": "10517"},
-    {"cityname": "Stuttgart", "apiKey": "Q358"}
+    {"cityname": "Bonn", "apiKey": "10517", "weather": {"temp": 17, "desc": "Sonnig", "rain": 12}},
+    {"cityname": "Stuttgart", "apiKey": "Q358", "weather": {"temp": 31, "desc": "Bewölkt", "rain": 78}}
 ]
 
 let weatherReports = [
@@ -106,6 +108,7 @@ function getParam(name){
 
 function GetDWDWeatherData(station)
 {
+    // Aufgrund von Cross-Origin-Request Beschränkungen funktioniert dieser API-Call nicht!
     let request = new XMLHttpRequest();
     const url = "https://dwd.api.proxy.bund.dev/v30/stationOverviewExtended?stationIds=" + station;
     request.open("GET", url);
