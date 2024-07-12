@@ -18,9 +18,13 @@ class WeatherData
     }
     WeatherData(){}
 
-    getFahrenheit()
+    getFahrenheitString()
     {
-        return temp * 0.56;
+        return temp * 0.56 + " *F";
+    }
+    getCelsiusString()
+    {
+        return temp + " °C";
     }
 }
 function ConvertDWDResponseToObject(json)
@@ -62,6 +66,10 @@ let users = [
     {"username": "user", "password": "user", "isAdmin": false, "useFahrenheit": true},
     {"username": "admin", "password": "admin", "isAdmin": true, "useFahrenheit": false}
 ]
+function usersGetFahrenheitPreference(index)
+{
+    return users[index].useFahrenheit;
+}
 
 let cities = [
     {"cityname": "Bonn", "apiKey": "10517", "weather": new WeatherData(17, "Sonnig", 12)},
@@ -144,9 +152,21 @@ function ShowAdminInterface(visible)
     }
 }
 
+function SetClickListener(DOMobj, listener)
+{
+    DOMobj.addEventListener("click", listener);
+}
 function SetInnerHTML(DOMobj, text)
 {
     DOMobj.innerHTML = text;
+}
+function GetDOMObject(DOMobjName)
+{
+    return document.getElementById(DOMobjName);
+}
+function GetInnerHTML(DOMobjName)
+{
+    return GetDOMObject(DOMobjName).innerHTML;
 }
 
 function EventFahrenheitValueChanged()
@@ -192,6 +212,38 @@ function SetPopupListeners()
         });
 }
 
+function ListenerFavoriteClick(num)
+{
+    // TODO
+}
+
+function AddCityOverview(num, cityname, tempString)
+{
+    // Es werden nur drei Favoriten angezeigt
+    const table = GetDOMObject("cityOverviewTable");
+    const template = GetInnerHTML("cityOverview1");
+    const defaultNameStr = "Stadtname1";
+    const defaultTempStr = "Stadttemp1";
+    const defaultFavStr = "FavoritenSpeichern1"
+    const nameStr = "Stadtname" + num;
+    const tempStr = "Stadttemp" + num;
+    const favStr = "FavoritenSpeichern" + num;
+
+    const row = table.insertRow(num);
+    row.innerHTML = template;
+    const nameObj = row.getElementById(defaultNameStr);
+    const tempObj = row.getElementById(defaultTempStr);
+    const favObj = row.getElementById(defaultFavStr);
+    
+    nameObj.id = nameStr;
+    tempObj.id = tempStr;
+    favObj.id = favStr;
+    
+    SetClickListener(favObj, ListenerFavoriteClick(num));
+    SetInnerHTML(nameObj, cityname);
+    SetInnerHTML(tempObj, tempString);
+    
+}
 function SetCityName(cityname)
 {
     const citynameObj = document.getElementById("Stadtname");
@@ -229,6 +281,47 @@ function SetUser(username)
     alert("Der Benutzer wurde nicht gefunden!");
 }
 
+function FillWeatherReports()
+{
+    // TODO
+}
+
+function FillCityOverview()
+{
+    let addedCities = [];
+    for (let i = 0; i < favouriteCities.length; i++)
+    {
+        const currentFav = favouriteCities[i];
+        if (currentFav["user"] === users[currentUserIndex]["username"]) // is favourite city of current user
+        {
+            const weather = getWeatherForCity(currentFav["city"]);
+            const temp = usersGetFahrenheitPreference(currentUserIndex) ? weather.getFahrenheitString : weather.getCelsiusString;
+            AddCityOverview(i, currentFav, temp);
+            addedCities.push(currentFav["city"]);
+        }
+    }
+
+    for (let i = favouriteCities.length; i < cities.length + favouriteCities.length; i++)
+    {
+        let notFav = true;
+        const currentCity = cities[i];
+        for (let i = 0; i < addedCities.length; i++)
+        {
+            if (currentCity["cityname"] === addedCities[i])
+            {
+                notFav = false;
+                break;
+            }
+        }
+
+        if (notFav)
+        {
+            const temp = usersGetFahrenheitPreference(currentUserIndex) ? weather.getFahrenheitString : weather.getCelsiusString;
+            AddCityOverview(i, currentCity["cityname"], temp);
+        }
+    }
+}
+
 function FillData()
 {
     const cityname = getParam(cityStorageName);
@@ -242,8 +335,17 @@ function FillData()
     {
         SetCityName(cityname);
     
-        SetTemperature(users[currentUserIndex].useFahrenheit ? weather.getFahrenheit() : weather.temp);
+        SetTemperature(users[currentUserIndex].useFahrenheit ? weather.getFahrenheitString() : weather.temp);
         SetRain(weather.rainPossibility);
+    }
+
+    try
+    {
+        FillCityOverview();
+    }
+    catch
+    {
+        // Nicht die Startseite
     }
 }
 
