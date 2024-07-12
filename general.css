@@ -1,0 +1,9 @@
+.admin
+{
+    visibility: hidden;
+}
+
+.showHoverMouse:hover
+{
+    cursor: pointer;
+}

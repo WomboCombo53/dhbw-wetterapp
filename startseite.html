@@ -6,6 +6,7 @@
     <title>Wetter-App</title>
     <link rel="stylesheet" href="startseite.css">
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="general.css">
     <script src="script.js"></script>
 </head>
 <body>
@@ -42,7 +43,7 @@
     <table id="cityOverviewTable" class="table_städte_anzeigen" align="center">
         <tr id="cityOverview1">
             <td>
-                <button class="keine_border" id="Stadtname1"><a href="Stadt.html?stadt=stuttgart">id=Stadtname1</a></button>
+                <button class="keine_border showHoverMouse" id="Stadtname1"><a href="Stadt.html?stadt=stuttgart">id=Stadtname1</a></button>
             </td>
             <td>
                 <a id="Stadttemp1">id=Stadttemp1</a>
@@ -52,28 +53,8 @@
                 <!--https://www.flaticon.com/de/kostenloses-icon/star_118669?term=stern&page=1&position=1&origin=search&related_id=118669-->
             </td>
         </tr>
-        <tr>
-            <td>
-                <button class="keine_border" id="Stadtname2"><a href="Stadt.html">id=Stadtname2</a></button>
-            </td>
-            <td>
-                <a id="Stadttemp2">id=Stadttemp2</a>
-            </td>
-            <td>
-                <button class="keine_border" id="FavoritenSpeichern2"><img src="bilder/favoritenbild.png"></button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button class="keine_border" id="Stadtname3"><a href="Stadt.html">id=Stadtname3</a></button>
-            </td>
-            <td>
-                <a id="Stadttemp3">id=Stadttemp3</a>
-            </td>
-            <td>
-                <button class="keine_border" id="FavoritenSpeichern3"><img src="bilder/favoritenbild.png"></button>
-            </td>
-        </tr>
+    </table>
+    <table align="center">
         <tr class="admin">
             <td>
                 <a class="neue_stadt">Neue Stadt hinzufügen:</a>
@@ -85,7 +66,7 @@
         <tr class="admin">
             <td></td>
             <td>
-                <button class="neue_stadt_button" id="neue_stadt_bestaetigen_button">Bestätigen</button>
+                <button class="neue_stadt_button" id="neue_stadt_bestaetigen_button" onclick="ListenerNewCityClick()">Bestätigen</button>
             </td>
         </tr>
     </table>
