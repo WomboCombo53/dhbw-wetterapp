@@ -367,7 +367,16 @@ function SetUser(username)
 
 function FillWeatherReports()
 {
-    // TODO
+    const usernameObj = GetDOMObject("username");
+    const timeObj = GetDOMObject("uhrzeit_user");
+    const tempObj = GetDOMObject("temp_user");
+    const rainObj = GetDOMObject("regen_user");
+
+    const report = weatherReports[0]["report"];
+    SetInnerHTML(usernameObj, weatherReports[0]["user"]);
+    SetInnerHTML(timeObj, report.timeOfReport.toDateString());
+    SetInnerHTML(tempObj, usersGetFahrenheitPreference(currentUserIndex) ? getFahrenheitString(report) : getCelsiusString(report));
+    SetInnerHTML(rainObj, report.rainPossibility + "% Regenwahrscheinlichkeit");
 }
 function ResetCityOverview()
 {
@@ -447,11 +456,12 @@ function FillData()
     {
         SetCityName(cityname);
     
-        SetTemperature(users[currentUserIndex].useFahrenheit ? weather.getFahrenheitString() : weather.temp);
+        SetTemperature(usersGetFahrenheitPreference(currentUserIndex) ? getFahrenheitString(weather) : getCelsiusString(weather));
         SetRain(weather.rainPossibility);
     }
 
     FillCityOverview();
+    
 }
 
 function ScriptOnDocLoad()
@@ -476,5 +486,8 @@ function ScriptOnDocLoad()
     {
         // HTML Elemente nicht gefunden
     }
+
+
+    FillWeatherReports();
 }
 window.onload = ScriptOnDocLoad;
