@@ -9,22 +9,25 @@ button
     border: 0;
 }
 
+/*Start*/
+/*https://www.html-seminar.de/css-absolute-positionierung.htm*/
 .table_icons
 {
-    position: absolute;
-    width: auto;
-    height: auto;
-    top: 0%;
-    right: 0%;
+    position: absolute; 
+    width: auto; 
+    height: auto; 
+    top: 0%; 
+    right: 0%; 
     background-color: #56c7f7;
 }
+/*Ende*/
 
 .icons
 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    display: block; /*ChatGPT*/
+    margin-left: auto; /*ChatGPT*/
+    margin-right: auto; /*ChatGPT*/
+    width: 100%; /*ChatGPT*/
 }
 
 body
@@ -40,7 +43,7 @@ h1
 .kurzbeschreibung
 {
     height: 200px;
-    vertical-align: top;
+    vertical-align: top; /*ChatGPT*/
     text-align: right;
 }
 
@@ -48,7 +51,7 @@ input
 {
     width: 400px;
     background-color: white;
-    border-spacing: 10px;
+    border-spacing: 10px; /*ChatGPT*/
 }
 
 td

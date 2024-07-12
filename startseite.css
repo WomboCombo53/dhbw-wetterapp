@@ -9,6 +9,8 @@ button
     border: 0;
 }
 
+/*Start*/
+/*https://www.html-seminar.de/css-absolute-positionierung.htm*/
 .table_icons
 {
     position: absolute;
@@ -18,22 +20,23 @@ button
     right: 0%;
     background-color: #56c7f7;
 }
+/*Ende*/
 
 .table_städte_anzeigen
 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: xx-large;
     font-weight: bold;
-    border-spacing: 10px;
+    border-spacing: 10px; /*ChatGPT*/
     width: 400px
 }
 
 .icons
 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    display: block; /*ChatGPT*/
+    margin-left: auto; /*ChatGPT*/
+    margin-right: auto; /*ChatGPT*/
+    width: 100%; /*ChatGPT*/
 }
 
 body
